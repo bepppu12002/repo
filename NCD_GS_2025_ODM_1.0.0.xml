@@ -4,7 +4,7 @@
     <GlobalVariables>
       <StudyName>NCD_GS_2025_OGM</StudyName>
       <StudyDescription>This study is NCD (Gastroenterological Surgery) in 2025</StudyDescription>
-      <ProtocolName>NCD_GS_2025_OGM</ProtocolName>
+      <ProtocolName>NCD_GS_2025</ProtocolName>
     </GlobalVariables>
     <BasicDefinitions>
       <MeasurementUnit OID="MU.CM" Name="centimeters">
