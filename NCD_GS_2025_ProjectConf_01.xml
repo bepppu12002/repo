@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Name="NCD_GS_2025_OGM" xml:space="preserve">
+  <TranslatedText xml:lang="ja">NCD（消化器外科）2025年度版</TranslatedText>
+  <Configurations>
+    <Configuration Revision="1">
+      <StudyCase>
+        <Template File="Templates\99801-0001.mksx" Code="MKS-99801-00" Revision="01" />
+        <Properties>
+          <Property ID="PATIENT_ID"   Name="患者ID" ElemID="2" Type="Value" IsVisible="Local"/>
+          <Property ID="PATIENT_NAME" Name="患者名" ElemID="3" Type="Value" IsVisible="Local"/>
+          <Property ID="HOSPITAL_CODE" Name="院内管理コード" ElemID="5" Type="Value" IsVisible="Local"/>
+        </Properties>
+      </StudyCase>
+      <StudyCase />
+      <Studies>
+        <Study StudyOID="NCD_GS_2025_OGM" Mandatory="Yes" SubmitType="AtEvent">
+          <TranslatedText xml:lang="ja">NCD（消化器外科）2025年度版</TranslatedText>
+          <StudyEvents>
+            <StudyEvent StudyEventOID="SE.1AD_1OPE" Mandatory="Yes">
+              <TranslatedText xml:lang="ja">入院1回目・手術1回目</TranslatedText>
+              <Templates>
+                <Template FormOID="FM.PTINFO_NEW" File="Templates\99822-0002.mksx" Code="MKS-99822-00" Revision="02" />
+                <Template FormOID="FM.ADINFO_1OPE" File="Templates\99804-0001.mksx" Code="MKS-99804-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_INFO" File="Templates\99806-0001.mksx" Code="MKS-99806-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_FINDINGS" File="Templates\99823-0001.mksx" Code="MKS-99823-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_LABDATA" File="Templates\99808-0001.mksx" Code="MKS-99808-00" Revision="01" />
+                <Template FormOID="FM.INOPE_INFO" File="Templates\99824-0003.mksx" Code="MKS-99824-00" Revision="03" />
+                <Template FormOID="FM.POSTOPE_DG" File="Templates\99810-0001.mksx" Code="MKS-99810-00" Revision="01" />
+                <Template FormOID="FM.POSTOPE_AE" File="Templates\99811-0001.mksx" Code="MKS-99811-00" Revision="01" />
+                <Template FormOID="FM.DISCHARGE_INFO" File="Templates\99812-0001.mksx" Code="MKS-99812-00" Revision="01" />
+              </Templates>
+            </StudyEvent>
+            <StudyEvent StudyEventOID="SE.ADD_AD" Mandatory="No" Repeating="Yes" MinOccurs="1" MaxOccurs="50">
+              <TranslatedText xml:lang="ja">入院追加</TranslatedText>
+              <Templates>
+                <Template FormOID="FM.PTINFO_ADD" File="Templates\99803-0001.mksx" Code="MKS-99803-00" Revision="01" />
+                <Template FormOID="FM.ADINFO_1OPE" File="Templates\99804-0001.mksx" Code="MKS-99804-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_INFO" File="Templates\99806-0001.mksx" Code="MKS-99806-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_FINDINGS" File="Templates\99823-0001.mksx" Code="MKS-99823-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_LABDATA" File="Templates\99808-0001.mksx" Code="MKS-99808-00" Revision="01" />
+                <Template FormOID="FM.INOPE_INFO" File="Templates\99824-0003.mksx" Code="MKS-99824-00" Revision="03" />
+                <Template FormOID="FM.POSTOPE_DG" File="Templates\99810-0001.mksx" Code="MKS-99810-00" Revision="01" />
+                <Template FormOID="FM.POSTOPE_AE" File="Templates\99811-0001.mksx" Code="MKS-99811-00" Revision="01" />
+                <Template FormOID="FM.DISCHARGE_INFO" File="Templates\99812-0001.mksx" Code="MKS-99812-00" Revision="01" />
+              </Templates>
+            </StudyEvent>
+            <StudyEvent StudyEventOID="SE.ADD_OPE" Mandatory="No" Repeating="Yes" MinOccurs="1" MaxOccurs="50">
+              <TranslatedText xml:lang="ja">手術追加</TranslatedText>
+              <Templates>
+                <Template FormOID="FM.PTINFO_ADD" File="Templates\99803-0001.mksx" Code="MKS-99803-00" Revision="01" />
+                <Template FormOID="FM.ADINFO_ADDOPE" File="Templates\99805-0001.mksx" Code="MKS-99805-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_INFO" File="Templates\99806-0001.mksx" Code="MKS-99806-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_FINDINGS" File="Templates\99823-0001.mksx" Code="MKS-99823-00" Revision="01" />
+                <Template FormOID="FM.PREOPE_LABDATA" File="Templates\99808-0001.mksx" Code="MKS-99808-00" Revision="01" />
+                <Template FormOID="FM.INOPE_INFO" File="Templates\99824-0003.mksx" Code="MKS-99824-00" Revision="03" />
+                <Template FormOID="FM.POSTOPE_DG" File="Templates\99810-0001.mksx" Code="MKS-99810-00" Revision="01" />
+                <Template FormOID="FM.POSTOPE_AE" File="Templates\99811-0001.mksx" Code="MKS-99811-00" Revision="01" />
+              </Templates>
+            </StudyEvent>
+          </StudyEvents>
+          <OdmDef File="NCD_GS_2025_OGM_ODM_1.0.0.xml" StudyOID="NCD_GS_2025_OGM" MetaDataVersionOID="1.0.0" />
+        </Study>
+      </Studies>
+    </Configuration>
+  </Configurations>
+</Project>
